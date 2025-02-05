@@ -80,7 +80,6 @@ export default function Home() {
           >
             <a href="#about" className="hover:text-primary transition-colors">👨‍💻 About</a>
             <a href="#skills" className="hover:text-primary transition-colors">🚀 Skills</a>
-            <a href="#projects" className="hover:text-primary transition-colors">💡 Projects</a>
             <a href="#contact" className="hover:text-primary transition-colors">🤝 Connect</a>
           </motion.div>
         </div>
