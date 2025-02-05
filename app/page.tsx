@@ -5,7 +5,7 @@ import { Code2, Download, ExternalLink, Github, Linkedin, Mail, Terminal, Youtub
 import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
 
-// Konami Code sequence
+// Konami Code sequence  ↑ ↑ ↓ ↓ ← → ← →  B A
 const KONAMI_CODE = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
 
 
-  // ↑↑↓↓←→←→BA
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const newSequence = [...konamiSequence, event.key];
@@ -54,26 +54,26 @@ export default function Home() {
           <div className="text-green-400 text-lg space-y-2">
             <p className="typing-animation">$ whoami</p>
             <p className="typing-animation delay-1">mahdi_hazrati</p>
-            <p className="typing-animation delay-2">$ sudo make_coffee ☕</p>
-            <p className="typing-animation delay-3">Permission granted: Brewing perfect developer fuel... ⚡</p>
-            <p className="typing-animation delay-4">$ echo "You found the secret! 🎉"</p>
+            <p className="typing-animation delay-2">$ sudo make Chai ☕</p>
+            <p className="typing-animation delay-3">Permission granted⚡</p>
+            <p className="typing-animation delay-4">$ echo "WOW You found the secret! 🎉"</p>
           </div>
         </motion.div>
       )}
 
-      <motion.div 
+      <motion.div
         style={{ opacity, scale }}
         className="fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
       >
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <motion.h2 
+          <motion.h2
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             className="text-xl font-semibold"
           >
-            {"<MahdiHazrati />"}
+            {"Mahdi.is-a.dev"}
           </motion.h2>
-          <motion.div 
+          <motion.div
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             className="flex gap-4"
@@ -87,7 +87,7 @@ export default function Home() {
       </motion.div>
 
       <div className="max-w-6xl mx-auto px-4 py-20">
-        <motion.div 
+        <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -99,7 +99,8 @@ export default function Home() {
             {"<Hello World />"}
           </h1>
           <h2 className="text-3xl font-semibold mb-2">I&apos;m Mahdi Hazrati</h2>
-          <p className="text-xl text-muted-foreground mb-6">Frontend Developer & Code Artisan 🎨</p>
+          <p className="text-xl text-muted-foreground mb-6">Front-End developer</p>
+          <p className="w-fulltext-xs text-muted-foreground mb-6 text-white">↑ ↑ ↓ ↓ ← → ← →  B A</p>
           <motion.a
             href="https://mahdihazrati.ir/assets/files/Mahdi%20Hazrati%20Portfolio%20-%20v3.0.3%20-%202024%2010%2024-encrypted.pdf"
             target="_blank"
@@ -109,11 +110,11 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
           >
             <Download className="w-5 h-5" aria-hidden="true" />
-            Download CV
+            Download My CV
           </motion.a>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           id="about"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -122,19 +123,17 @@ export default function Home() {
           className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32"
         >
           <div className="space-y-6">
-            <h3 className="text-3xl font-semibold mb-4">{"<AboutMe />"} 🧙‍♂️</h3>
+            <h3 className="text-3xl font-semibold mb-4">{"<AboutMe />"} ☕⚡</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Hey there! I&apos;m a 23-year-old code wizard 🪄 studying Computer Science and crafting
-              awesome web experiences. With 3 years of battling bugs 🐛 and turning coffee ☕️ into code,
-              I specialize in React and Next.js magic ✨. I love building things that make the web a
-              better place, one component at a time! 
+              hey there! i love chai ☕, codding 💻, making geek stuff 🤓, and learning new things 🚀. been doing software enginer stuff for 3 years, mostly with react ⚛️ and next.js 🗺️. i battle bugs 🐞, write code, and break things just to fix them again. also love open source cuz sharing is cool. let's build something awesome together! ⚡
             </p>
           </div>
-          <motion.div 
+
+          <motion.div
             id="skills"
             className="space-y-6"
           >
-            <h3 className="text-3xl font-semibold mb-4">{"<Skills />"} 🎯</h3>
+            <h3 className="text-3xl font-semibold mb-4">{"<Skills />"} ⚡</h3>
             <div className="grid grid-cols-2 gap-4">
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -145,9 +144,10 @@ export default function Home() {
                 className="bg-card p-4 rounded-lg"
               >
                 <Code2 className="w-8 h-8 mb-2 text-primary" aria-hidden="true" />
-                <h4 className="font-semibold">Frontend Sorcery 🔮</h4>
-                <p className="text-sm text-muted-foreground">React, Next.js, TypeScript</p>
+                <h4 className="font-semibold">frontend geek stuff 🤓</h4>
+                <p className="text-sm text-muted-foreground">react ⚛️, next.js 🚀, making things work (somehow)</p>
               </motion.div>
+
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -157,50 +157,54 @@ export default function Home() {
                 className="bg-card p-4 rounded-lg"
               >
                 <Terminal className="w-8 h-8 mb-2 text-primary" aria-hidden="true" />
-                <h4 className="font-semibold">Clean Code Ninja 🥷</h4>
-                <p className="text-sm text-muted-foreground">Performance, Best Practices</p>
+                <h4 className="font-semibold">terminal vibes 🖥️</h4>
+                <p className="text-sm text-muted-foreground">ubuntu 🐧, linux commands 💻, living in the terminal</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300, delay: 0.2 }}
+                className="bg-card p-4 rounded-lg"
+              >
+                <Code2 className="w-8 h-8 mb-2 text-primary" aria-hidden="true" />
+                <h4 className="font-semibold">python hacker 🐍</h4>
+                <p className="text-sm text-muted-foreground">scripts, automation, random experiments ⚗️</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300, delay: 0.3 }}
+                className="bg-card p-4 rounded-lg"
+              >
+                <Terminal className="w-8 h-8 mb-2 text-primary" aria-hidden="true" />
+                <h4 className="font-semibold">open source explorer 🌍</h4>
+                <p className="text-sm text-muted-foreground">breaking stuff, fixing stuff, contributing just because 🚀</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300, delay: 0.4 }}
+                className="bg-card p-4 rounded-lg"
+              >
+                <Code2 className="w-8 h-8 mb-2 text-primary" aria-hidden="true" />
+                <h4 className="font-semibold">chaos coder ☕⚡</h4>
+                <p className="text-sm text-muted-foreground">making something from zero knowledge, powered by chai</p>
               </motion.div>
             </div>
+
           </motion.div>
         </motion.div>
 
-        <motion.div 
-          id="projects"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="mb-32"
-        >
-          <h3 className="text-3xl font-semibold mb-8">{"<Projects />"} 🛠️</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((project, index) => (
-              <motion.div
-                key={project}
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="bg-card p-6 rounded-lg"
-              >
-                <h4 className="text-xl font-semibold mb-2">Project {project} 🚀</h4>
-                <p className="text-muted-foreground mb-4">
-                  A dynamic web application built with React and Next.js, featuring responsive design
-                  and optimal performance.
-                </p>
-                <Link
-                  href="#"
-                  className="text-primary hover:text-primary-foreground transition-colors"
-                >
-                  View Project →
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div 
+        <motion.div
           id="contact"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -229,16 +233,6 @@ export default function Home() {
             >
               <Linkedin className="w-5 h-5" aria-hidden="true" />
               <span>LinkedIn</span>
-            </motion.a>
-            <motion.a
-              href="https://youtube.com/@MahdiCodingJourney"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              className="bg-card p-4 rounded-lg flex items-center gap-2"
-            >
-              <Youtube className="w-5 h-5" aria-hidden="true" />
-              <span>YouTube</span>
             </motion.a>
             <motion.a
               href="https://mahdihazrati.ir"
